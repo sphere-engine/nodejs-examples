@@ -6,7 +6,7 @@ var endpoint = '<endpoint>';
 request({
 	
 	url: 'http://' + endpoint + '/api/v3/test?access_token=' + accessToken,
-    method: 'GET'
+	method: 'GET'
 }, function (error, response, body) {
 	
     if (error) {
