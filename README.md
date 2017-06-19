@@ -1,1 +1,1 @@
-# nodejs-examples
+Node.js examples for using Sphere Engine API
