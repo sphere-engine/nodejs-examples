@@ -4,9 +4,9 @@ var accessToken = '<access_token>';
 var endpoint = '<endpoint>';
 
 var submissionData = {
-	problemCode: 'EXAMPLE',
-	compilerId: 11, // C language
-	source: '<source_code>'
+    problemCode: 'EXAMPLE',
+    compilerId: 11, // C language
+    source: '<source_code>'
 };
 
 request({

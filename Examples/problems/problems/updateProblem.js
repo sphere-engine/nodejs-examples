@@ -6,7 +6,7 @@ var endpoint = '<endpoint>';
 var problemCode = 'EXAMPLE';
 
 var problemData = {
-	name: 'New name'
+    name: 'New name'
 };
 
 request({

@@ -6,8 +6,8 @@ var endpoint = '<endpoint>';
 var judgeId = 1;
 
 var judgeData = {
-	compiler: 11,
-	source: '<source_code>'
+    compiler: 11,
+    source: '<source_code>'
 };
 
 request({

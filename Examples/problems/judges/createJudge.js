@@ -4,8 +4,8 @@ var accessToken = '<access_token>';
 var endpoint = '<endpoint>';
 
 var judgeData = {
-	compiler: 11,
-	sourceCode: '<source_code>'
+    compiler: 11,
+    sourceCode: '<source_code>'
 };
 
 request({

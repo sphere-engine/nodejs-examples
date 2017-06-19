@@ -4,8 +4,8 @@ var accessToken = '<access_token>';
 var endpoint = '<endpoint>';
 
 var submissionData = {
-	language: 11,
-	sourceCode: '<source_code>'
+    language: 11,
+    sourceCode: '<source_code>'
 };
 
 request({

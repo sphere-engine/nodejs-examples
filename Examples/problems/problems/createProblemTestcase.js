@@ -6,10 +6,10 @@ var endpoint = '<endpoint>';
 var problemCode = 'EXAMPLE';
 
 var testcaseData = {
-	input: 'Input',
-	output: 'Output',
-	timelimit: 5,
-	judgeId: 1
+    input: 'Input',
+    output: 'Output',
+    timelimit: 5,
+    judgeId: 1
 };
 
 request({

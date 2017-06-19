@@ -4,8 +4,8 @@ var accessToken = '<access_token>';
 var endpoint = '<endpoint>';
 
 var problemData = {
-	name: 'Example',
-	code: 'EXAMPLE'
+    name: 'Example',
+    code: 'EXAMPLE'
 };
 
 request({

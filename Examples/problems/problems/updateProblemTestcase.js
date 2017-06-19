@@ -7,7 +7,7 @@ var problemCode = 'EXAMPLE';
 var testcaseNumber = 0;
 
 var testcaseData = {
-	input: 'New input'
+    input: 'New input'
 };
 
 request({
