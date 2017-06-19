@@ -4,23 +4,22 @@ var accessToken = '<access_token>';
 var endpoint = '<endpoint>';
 
 request({
-	
-	url: 'http://' + endpoint + '/api/v3/test?access_token=' + accessToken,
-	method: 'GET'
+    
+    url: 'http://' + endpoint + '/api/v3/test?access_token=' + accessToken,
+    method: 'GET'
 }, function (error, response, body) {
-	
+    
     if (error) {
-		console.log('Connection problem');
-	}
-	
+        console.log('Connection problem');
+    }
+    
     if (response) {
-		if (response.statusCode === 200) {
-			console.log(JSON.parse(response.body)); // test message in JSON
-		}
-		else {
-			if (response.statusCode === 401) {
-				console.log('Invalid access token');
-			}
-		}
-	}
+        if (response.statusCode === 200) {
+            console.log(JSON.parse(response.body)); // test message in JSON
+        } else {
+            if (response.statusCode === 401) {
+                console.log('Invalid access token');
+            }
+        }
+    }
 });

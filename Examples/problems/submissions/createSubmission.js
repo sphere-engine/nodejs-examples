@@ -10,30 +10,29 @@ var submissionData = {
 };
 
 request({
-	
-	url: 'http://' + endpoint + '/api/v3/submissions?access_token=' + accessToken,
+    
+    url: 'http://' + endpoint + '/api/v3/submissions?access_token=' + accessToken,
     method: 'POST',
-	form: submissionData
+    form: submissionData
 }, function (error, response, body) {
-	
+    
     if (error) {
-		console.log('Connection problem');
-	}
-	
+        console.log('Connection problem');
+    }
+    
     if (response) {
-		if (response.statusCode === 201) {
-			console.log(JSON.parse(response.body)); // submission data in JSON
-		}
-		else {
-			if (response.statusCode === 401) {
-				console.log('Invalid access token');
-			}
-			if (response.statusCode === 400) {
-				console.log('Empty source code');
-			}
-			if (response.statusCode === 404) {
-				console.log('Problem, compiler or user does not exist');
-			}
-		}
-	}
+        if (response.statusCode === 201) {
+            console.log(JSON.parse(response.body)); // submission data in JSON
+        } else {
+            if (response.statusCode === 401) {
+                console.log('Invalid access token');
+            }
+            if (response.statusCode === 400) {
+                console.log('Empty source code');
+            }
+            if (response.statusCode === 404) {
+                console.log('Problem, compiler or user does not exist');
+            }
+        }
+    }
 });
