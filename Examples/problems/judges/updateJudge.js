@@ -6,7 +6,7 @@ var endpoint = '<endpoint>';
 var judgeId = 1;
 
 var judgeData = {
-    compiler: 11,
+    compilerId: 11,
     source: '<source_code>'
 };
 

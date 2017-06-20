@@ -7,7 +7,7 @@ var submissionId = 2016;
 
 request({
     
-    url: 'http://' + endpoint + '/api/v3/submissions/' + submissionId + '/output?access_token=' + accessToken,
+    url: 'http://' + endpoint + '/api/v3/submissions/' + submissionId + '/input?access_token=' + accessToken,
     method: 'GET'
 }, function (error, response, body) {
     

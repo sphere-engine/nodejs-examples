@@ -32,13 +32,16 @@ request({
                 console.log('Invalid access token');
             }
             if (response.statusCode === 400) {
-                console.log('Empty code or empty name');
+                console.log('Maximum number of test cases reached or timelimit is invalid');
             }
             if (response.statusCode === 403) {
                 console.log('Access denied');
             }
             if (response.statusCode === 404) {
-                console.log('Testcase, problem or judge does not exist');
+                console.log('Problem or judge does not exist');
+            }
+			if (response.statusCode === 409) {
+                console.log('Many test cases added at the same time ');
             }
         }
     }

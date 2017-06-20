@@ -5,7 +5,7 @@ var endpoint = '<endpoint>';
 
 var submissionData = {
     problemCode: 'EXAMPLE',
-    compilerId: 11, // C language
+    compilerId: 11,
     source: '<source_code>'
 };
 

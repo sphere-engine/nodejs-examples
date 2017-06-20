@@ -30,7 +30,7 @@ request({
                 console.log('Empty name, empty code, not unique code or invalid code');
             }
             if (response.statusCode === 404) {
-                console.log('Problem or masterjudge does not exist');
+                console.log('Masterjudge does not exist');
             }
         }
     }
