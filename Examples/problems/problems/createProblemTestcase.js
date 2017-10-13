@@ -1,10 +1,11 @@
 var request = require('request');
 
+// define access parameters
 var accessToken = '<access_token>';
 var endpoint = '<endpoint>';
 
+// define request parameters
 var problemCode = 'EXAMPLE';
-
 var testcaseData = {
     input: 'Input',
     output: 'Output',
@@ -12,6 +13,7 @@ var testcaseData = {
     judgeId: 1
 };
 
+// send request
 request({
     
     url: 'http://' + endpoint + '/api/v3/problems/' + problemCode +  '/testcases?access_token=' + accessToken,
@@ -23,6 +25,7 @@ request({
         console.log('Connection problem');
     }
     
+    // process response
     if (response) {
         if (response.statusCode === 201) {
             console.log(JSON.parse(response.body)); // testcase data in JSON

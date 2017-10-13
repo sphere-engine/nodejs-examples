@@ -1,13 +1,16 @@
 var request = require('request');
 
+// define access parameters
 var accessToken = '<access_token>';
 var endpoint = '<endpoint>';
 
+// define request parameters
 var judgeData = {
     compilerId: 11,
     source: '<source_code>'
 };
 
+// send request
 request({
     
     url: 'http://' + endpoint + '/api/v3/judges?access_token=' + accessToken,
@@ -19,6 +22,7 @@ request({
         console.log('Connection problem');
     }
     
+    // process response
     if (response) {
         if (response.statusCode === 201) {
             console.log(JSON.parse(response.body)); // judge data in JSON

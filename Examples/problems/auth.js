@@ -1,12 +1,13 @@
 var request = require('request');
 
+// define access parameters
 var endpoint = '<endpoint>';
-
 var authData = {
     username: '<username>',
     password: '<password>'
 };
 
+// send request
 request({
     
     url: 'http://' + endpoint + '/api/v3/auth',
@@ -18,6 +19,7 @@ request({
         console.log('Connection problem');
     }
     
+    // process response
     if (response) {
         if (response.statusCode === 200) {
             console.log(JSON.parse(response.body)); // auth data in JSON

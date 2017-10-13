@@ -1,14 +1,16 @@
 var request = require('request');
 
+// define access parameters
 var accessToken = '<access_token>';
 var endpoint = '<endpoint>';
 
+// define request parameters
 var problemCode = 'EXAMPLE';
-
 var problemData = {
     name: 'New name'
 };
 
+// send request
 request({
     
     url: 'http://' + endpoint + '/api/v3/problems/' + problemCode +  '?access_token=' + accessToken,
@@ -20,6 +22,7 @@ request({
         console.log('Connection problem');
     }
     
+    // process response
     if (response) {
         if (response.statusCode === 200) {
             console.log('Problem updated');

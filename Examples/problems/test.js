@@ -1,8 +1,10 @@
 var request = require('request');
 
+// define access parameters
 var accessToken = '<access_token>';
 var endpoint = '<endpoint>';
 
+// send request
 request({
     
     url: 'http://' + endpoint + '/api/v3/test?access_token=' + accessToken,
@@ -13,11 +15,12 @@ request({
         console.log('Connection problem');
     }
     
+    // process response
     if (response) {
         if (response.statusCode === 200) {
             console.log(JSON.parse(response.body)); // test message in JSON
-    } else {
-        if (response.statusCode === 401) {
+        } else {
+            if (response.statusCode === 401) {
                 console.log('Invalid access token');
             }
         }
