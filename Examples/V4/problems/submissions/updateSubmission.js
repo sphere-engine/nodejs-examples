@@ -5,13 +5,17 @@ var accessToken = '<access_token>';
 var endpoint = '<endpoint>';
 
 // define request parameters
-var judgeId = 1;
+var submissionData = {
+};
+
+var submissionId = 2017;
 
 // send request
 request({
     
-    url: 'http://' + endpoint + '/api/v3/judges/' + judgeId + '?access_token=' + accessToken,
-    method: 'GET'
+    url: 'http://' + endpoint + '/api/v4/submissions/' + submissionId + '?access_token=' + accessToken,
+    method: 'PUT',
+    form: submissionData
 }, function (error, response, body) {
     
     if (error) {
@@ -21,16 +25,14 @@ request({
     // process response
     if (response) {
         if (response.statusCode === 200) {
-            console.log(JSON.parse(response.body)); // judge data in JSON
+            console.log('Submission updated');
         } else {
             if (response.statusCode === 401) {
                 console.log('Invalid access token');
-            }
-            if (response.statusCode === 403) {
+            } else if (response.statusCode === 403) {
                 console.log('Access denied');
-            }
-            if (response.statusCode === 404) {
-                console.log('Judge not found');
+            } else if (response.statusCode === 404) {
+                console.log('Submision not found');
             }
         }
     }

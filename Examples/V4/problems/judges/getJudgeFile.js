@@ -6,11 +6,12 @@ var endpoint = '<endpoint>';
 
 // define request parameters
 var judgeId = 1;
+var stream = 'source'
 
 // send request
 request({
     
-    url: 'http://' + endpoint + '/api/v3/judges/' + judgeId + '?access_token=' + accessToken,
+    url: 'http://' + endpoint + '/api/v4/judges/' + judgeId + '/' + stream + '?access_token=' + accessToken,
     method: 'GET'
 }, function (error, response, body) {
     
@@ -21,16 +22,15 @@ request({
     // process response
     if (response) {
         if (response.statusCode === 200) {
-            console.log(JSON.parse(response.body)); // judge data in JSON
+            console.log(response.body); // raw data from selected stream
         } else {
             if (response.statusCode === 401) {
                 console.log('Invalid access token');
-            }
-            if (response.statusCode === 403) {
+            } else if (response.statusCode === 403) {
                 console.log('Access denied');
-            }
-            if (response.statusCode === 404) {
-                console.log('Judge not found');
+            } else if (response.statusCode === 404) {
+                var body = JSON.parse(response.body);
+                console.log('Non existing resource, error code: ' + body.error_code + ', details available in the message: ' + body.message)
             }
         }
     }
