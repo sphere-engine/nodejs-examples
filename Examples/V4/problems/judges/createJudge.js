@@ -13,8 +13,7 @@ var judgeData = {
 
 // send request
 request({
-    
-    url: 'http://' + endpoint + '/api/v4/judges?access_token=' + accessToken,
+    url: 'https://' + endpoint + '/api/v4/judges?access_token=' + accessToken,
     method: 'POST',
     form: judgeData
 }, function (error, response, body) {

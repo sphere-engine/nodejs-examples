@@ -5,7 +5,7 @@ var accessToken = '<access_token>';
 var endpoint = '<endpoint>';
 
 // define request parameters
-var problemCode = 'EXAMPLE';
+var problemId = 42;
 var testcaseData = {
     input: 'Input',
     output: 'Output',
@@ -16,7 +16,7 @@ var testcaseData = {
 // send request
 request({
     
-    url: 'http://' + endpoint + '/api/v4/problems/' + problemCode +  '/testcases?access_token=' + accessToken,
+    url: 'https://' + endpoint + '/api/v4/problems/' + problemId +  '/testcases?access_token=' + accessToken,
     method: 'POST',
     form: testcaseData
 }, function (error, response, body) {

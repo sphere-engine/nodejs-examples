@@ -6,8 +6,7 @@ var endpoint = '<endpoint>';
 
 // send request
 request({
-    
-    url: 'http://' + endpoint + '/api/v4/problems?access_token=' + accessToken,
+    url: 'https://' + endpoint + '/api/v4/problems?access_token=' + accessToken,
     method: 'GET'
 }, function (error, response, body) {
     

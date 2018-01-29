@@ -6,7 +6,7 @@ var endpoint = '<endpoint>';
 
 // define request parameters
 var submissionData = {
-    problemCode: 'EXAMPLE',
+    problemId: 42,
     compilerId: 11,
     'files[prog.cpp]': {
         value:  '<source_code>',
@@ -24,8 +24,7 @@ var submissionData = {
 
 // send request
 request({
-    
-    url: 'http://' + endpoint + '/api/v4/submissions?access_token=' + accessToken,
+    url: 'https://' + endpoint + '/api/v4/submissions?access_token=' + accessToken,
     method: 'POST',
     formData: submissionData
 }, function (error, response, body) {

@@ -5,14 +5,13 @@ var accessToken = '<access_token>';
 var endpoint = '<endpoint>';
 
 // define request parameters
-var problemCode = 'EXAMPLE';
+var problemId = 42;
 var testcaseNumber = 0;
 var fileName = 'input'
 
 // send request
 request({
-    
-    url: 'http://' + endpoint + '/api/v4/problems/' + problemCode + '/testcases/' + testcaseNumber + '/' + fileName + '?access_token=' + accessToken,
+    url: 'https://' + endpoint + '/api/v4/problems/' + problemId + '/testcases/' + testcaseNumber + '/' + fileName + '?access_token=' + accessToken,
     method: 'GET'
 }, function (error, response, body) {
     

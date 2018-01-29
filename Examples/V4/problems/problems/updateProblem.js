@@ -5,15 +5,14 @@ var accessToken = '<access_token>';
 var endpoint = '<endpoint>';
 
 // define request parameters
-var problemCode = 'EXAMPLE';
+var problemId = 42;
 var problemData = {
     name: 'New name'
 };
 
 // send request
 request({
-    
-    url: 'http://' + endpoint + '/api/v4/problems/' + problemCode +  '?access_token=' + accessToken,
+    url: 'https://' + endpoint + '/api/v4/problems/' + problemId +  '?access_token=' + accessToken,
     method: 'PUT',
     form: problemData
 }, function (error, response, body) {

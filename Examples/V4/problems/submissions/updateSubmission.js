@@ -5,15 +5,13 @@ var accessToken = '<access_token>';
 var endpoint = '<endpoint>';
 
 // define request parameters
-var submissionData = {
-};
+var submissionData = {};
 
 var submissionId = 2017;
 
 // send request
 request({
-    
-    url: 'http://' + endpoint + '/api/v4/submissions/' + submissionId + '?access_token=' + accessToken,
+    url: 'https://' + endpoint + '/api/v4/submissions/' + submissionId + '?access_token=' + accessToken,
     method: 'PUT',
     form: submissionData
 }, function (error, response, body) {

@@ -7,14 +7,12 @@ var endpoint = '<endpoint>';
 // define request parameters
 var problemData = {
     name: 'Example',
-    code: 'EXAMPLE',
     masterjudgeId: 1001
 };
 
 // send request
 request({
-    
-    url: 'http://' + endpoint + '/api/v4/problems?access_token=' + accessToken,
+    url: 'https://' + endpoint + '/api/v4/problems?access_token=' + accessToken,
     method: 'POST',
     form: problemData
 }, function (error, response, body) {
