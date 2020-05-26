@@ -10,7 +10,7 @@ var problemCode = 'EXAMPLE';
 // send request
 request({
     
-    url: 'http://' + endpoint + '/api/v3/problems/' + problemCode + '/testcases?access_token=' + accessToken,
+    url: 'https://' + endpoint + '/api/v3/problems/' + problemCode + '/testcases?access_token=' + accessToken,
     method: 'GET'
 }, function (error, response, body) {
     

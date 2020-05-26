@@ -13,7 +13,7 @@ var submissionData = {
 // send request
 request({
     
-    url: 'http://' + endpoint + '/api/v3/submissions?access_token=' + accessToken,
+    url: 'https://' + endpoint + '/api/v3/submissions?access_token=' + accessToken,
     method: 'POST',
     form: submissionData
 }, function (error, response, body) {

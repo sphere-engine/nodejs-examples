@@ -10,7 +10,7 @@ var submissionsIds = [2016, 2017];
 // send request
 request({
     
-    url: 'http://' + endpoint + '/api/v3/submissions?ids=' + submissionsIds.join() + '&access_token=' + accessToken,
+    url: 'https://' + endpoint + '/api/v3/submissions?ids=' + submissionsIds.join() + '&access_token=' + accessToken,
     method: 'GET'
 }, function (error, response, body) {
     

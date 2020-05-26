@@ -14,7 +14,7 @@ var judgeData = {
 // send request
 request({
     
-    url: 'http://' + endpoint + '/api/v3/judges/' + judgeId +  '?access_token=' + accessToken,
+    url: 'https://' + endpoint + '/api/v3/judges/' + judgeId +  '?access_token=' + accessToken,
     method: 'PUT',
     form: judgeData
 }, function (error, response, body) {

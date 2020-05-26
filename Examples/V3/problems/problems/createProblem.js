@@ -13,7 +13,7 @@ var problemData = {
 // send request
 request({
     
-    url: 'http://' + endpoint + '/api/v3/problems?access_token=' + accessToken,
+    url: 'https://' + endpoint + '/api/v3/problems?access_token=' + accessToken,
     method: 'POST',
     form: problemData
 }, function (error, response, body) {
