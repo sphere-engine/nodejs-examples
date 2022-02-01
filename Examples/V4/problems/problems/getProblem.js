@@ -9,7 +9,6 @@ var problemId = 42;
 
 // send request
 request({
-    
     url: 'https://' + endpoint + '/api/v4/problems/' + problemId + '?access_token=' + accessToken,
     method: 'GET'
 }, function (error, response, body) {

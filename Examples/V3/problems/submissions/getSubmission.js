@@ -9,7 +9,6 @@ var submissionId = 2016;
 
 // send request
 request({
-    
     url: 'https://' + endpoint + '/api/v3/submissions/' + submissionId + '?access_token=' + accessToken,
     method: 'GET'
 }, function (error, response, body) {

@@ -13,12 +13,11 @@ var judgeData = {
 
 // send request
 request({
-    
     url: 'https://' + endpoint + '/api/v3/judges/' + judgeId +  '?access_token=' + accessToken,
     method: 'PUT',
     form: judgeData
 }, function (error, response, body) {
-	
+    
     if (error) {
         console.log('Connection problem');
     }

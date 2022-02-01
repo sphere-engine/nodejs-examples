@@ -15,7 +15,6 @@ var testcaseData = {
 
 // send request
 request({
-    
     url: 'https://' + endpoint + '/api/v3/problems/' + problemCode +  '/testcases?access_token=' + accessToken,
     method: 'POST',
     form: testcaseData
@@ -43,7 +42,7 @@ request({
             if (response.statusCode === 404) {
                 console.log('Problem or judge does not exist');
             }
-			if (response.statusCode === 409) {
+            if (response.statusCode === 409) {
                 console.log('Many test cases added at the same time ');
             }
         }

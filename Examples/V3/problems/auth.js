@@ -9,7 +9,6 @@ var authData = {
 
 // send request
 request({
-    
     url: 'https://' + endpoint + '/api/v3/auth',
     method: 'POST',
     form: authData

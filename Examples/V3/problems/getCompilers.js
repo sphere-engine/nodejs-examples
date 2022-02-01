@@ -6,11 +6,10 @@ var endpoint = '<endpoint>';
 
 // send request
 request({
-    
     url: 'https://' + endpoint + '/api/v3/compilers?access_token=' + accessToken,
     method: 'GET'
 }, function (error, response, body) {
-	
+    
     if (error) {
         console.log('Connection problem');
     }

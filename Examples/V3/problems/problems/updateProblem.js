@@ -12,7 +12,6 @@ var problemData = {
 
 // send request
 request({
-    
     url: 'https://' + endpoint + '/api/v3/problems/' + problemCode +  '?access_token=' + accessToken,
     method: 'PUT',
     form: problemData

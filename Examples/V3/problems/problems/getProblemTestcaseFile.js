@@ -11,7 +11,6 @@ var fileName = '<file_name>'
 
 // send request
 request({
-    
     url: 'https://' + endpoint + '/api/v3/problems/' + problemCode + '/testcases/' + testcaseNumber + '/' + fileName + '?access_token=' + accessToken,
     method: 'GET'
 }, function (error, response, body) {

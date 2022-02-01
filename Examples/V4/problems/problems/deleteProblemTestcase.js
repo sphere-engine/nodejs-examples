@@ -10,7 +10,6 @@ var testcaseNumber = 0;
 
 // send request
 request({
-    
     url: 'https://' + endpoint + '/api/v4/problems/' + problemId + '/testcases/' + testcaseNumber + '?access_token=' + accessToken,
     method: 'DELETE'
 }, function (error, response, body) {

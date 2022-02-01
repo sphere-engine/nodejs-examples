@@ -12,7 +12,6 @@ var judgeData = {
 
 // send request
 request({
-    
     url: 'https://' + endpoint + '/api/v3/judges?access_token=' + accessToken,
     method: 'POST',
     form: judgeData

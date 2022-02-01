@@ -6,7 +6,6 @@ var endpoint = '<endpoint>';
 
 // send request
 request({
-    
     url: 'https://' + endpoint + '/api/v3/judges?access_token=' + accessToken,
     method: 'GET'
 }, function (error, response, body) {
